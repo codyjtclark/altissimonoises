@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage (Highest Priority) -->
+    <url>
+        <loc>https://altissimonoises.com/</loc>
+        <lastmod>2025-11-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Main Content Section (High Priority) -->
+    <url>
+        <loc>https://altissimonoises.com/#shows</loc>
+        <lastmod>2025-11-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Detailed Sub-sections (Medium Priority) -->
+    <url>
+        <loc>https://altissimonoises.com/#upcoming</loc>
+        <lastmod>2025-11-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://altissimonoises.com/#past-concerts</loc>
+        <lastmod>2025-11-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://altissimonoises.com/#instruments</loc>
+        <lastmod>2025-11-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://altissimonoises.com/#contact</loc>
+        <lastmod>2025-11-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>

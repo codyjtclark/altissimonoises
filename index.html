@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="This is Seattle clarinet, freelance musician, woodwind doubler, multiple woodwind instrumentalist, pit musician Cody Clark's official landing page, featuring upcoming show dates, past performances, and instrument specialization (Clarinet, Saxophone, Flute, Bassoon).">
+<meta name="description" content="Seattle-based freelance woodwind musician Cody Clark's official landing page, featuring upcoming show dates, past performances, and instrument specialization (Clarinet, Saxophone, Flute, Bassoon).">
 <title>Cody Clark | Seattle Woodwind Doubler, Clarinetist & Pit Musician</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+<!-- Load Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" media="print" onload="this.media='all'">
 <style>
   body {
@@ -53,59 +55,70 @@
 
   <!-- Navigation Tabs -->
   <nav class="flex justify-center space-x-2 mb-8 border-b border-gray-700 pb-4">
-    <button id="nav-current" onclick="showSection('upcoming-shows', this)" class="tab-btn bg-teal-600 text-white">Upcoming Shows</button>
+    <button id="nav-current" onclick="showSection('upcoming-shows', this)" class="tab-btn bg-teal-600 text-white">Upcoming</button>
     <button id="nav-past" onclick="showSection('past-shows', this)" class="tab-btn bg-gray-700 text-gray-300 hover:bg-gray-600">Past Shows</button>
   </nav>
 
-  <!-- Upcoming Shows Section (Default View) -->
+  <!-- Upcoming Shows Section (Default View) - Sorted Chronologically (Ascending) -->
   <div id="upcoming-shows" class="space-y-4">
     <div class="text-center pt-2 pb-4 mb-4">
       <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Upcoming Shows</h2>
     </div>
 
-    <!-- Upcoming Show 1 (Anything Goes) -->
-    <a href="https://www.ticketleap.events/tickets/reboottheatre/anything-goes#" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-4 px-6 text-white bg-teal-600 hover:bg-teal-700 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-teal-300">
-      <span class="text-2xl mr-4" role="img" aria-label="Theatre Icon">🎭</span>
-      <div class="flex flex-col text-center">
-        <span class="text-base font-semibold">Now Playing:</span>
-        <span class="text-xl font-extrabold leading-snug">Anything Goes</span>
-        <span class="text-sm font-normal leading-tight mt-1">(Nov 7–22)</span>
-        <span class="text-sm font-normal leading-tight text-gray-100">Reboot Theatre Company</span>
-      </div>
-    </a>
-
-    <!-- Upcoming Show 2 (The Hunchback of Notre Dame) -->
+    <!-- Upcoming Show 1 (The Hunchback of Notre Dame - Dec 5-21 2025) - ACTIVE LINK -->
     <a href="https://bainbridgeperformingarts.thundertix.com/events/243385" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-4 px-6 text-white bg-cyan-700 hover:bg-cyan-800 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-400">
       <span class="text-2xl mr-4" role="img" aria-label="Bell Icon">🔔</span>
       <div class="flex flex-col text-center">
-        <span class="text-base font-semibold">Up Next:</span>
+        <span class="text-base font-semibold">Get Tickets:</span>
         <span class="text-xl font-extrabold leading-snug">The Hunchback of Notre Dame</span>
-        <span class="text-sm font-normal leading-tight mt-1">(Dec 5–21)</span>
+        <span class="text-sm font-normal leading-tight mt-1">(Dec 5–21, 2025)</span>
         <span class="text-sm font-normal leading-tight text-gray-100">Bainbridge Performing Arts</span>
       </div>
     </a>
 
-    <!-- Upcoming Show 3 (Horizons of Gold) -->
+    <!-- Upcoming Show 2 (Horizons of Gold - Feb 5-15 2026) - ACTIVE LINK -->
     <a href="https://www.purplepass.com/organizer/64775" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-4 px-6 text-white bg-cyan-700 hover:bg-cyan-800 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-400">
       <span class="text-2xl mr-4" role="img" aria-label="Wheat Icon">🌾</span>
       <div class="flex flex-col text-center">
-        <span class="text-base font-semibold">Up Next:</span>
+        <span class="text-base font-semibold">Get Tickets:</span>
         <span class="text-xl font-extrabold leading-snug">Horizons of Gold</span>
-        <span class="text-sm font-normal leading-tight mt-1">(Feb 5–15)</span>
+        <span class="text-sm font-normal leading-tight mt-1">(Feb 5–15, 2026)</span>
         <span class="text-sm font-normal leading-tight text-gray-100">Cedarville University</span>
       </div>
     </a>
+
+    <!-- Upcoming Show 3 (Young Frankenstein - Mar 19–28 2026) - INACTIVE (Link Coming Soon) -->
+    <div class="flex items-center justify-center w-full py-4 px-6 text-gray-300 bg-slate-700 rounded-lg shadow-md">
+      <span class="text-2xl mr-4 text-gray-400" role="img" aria-label="Castle Icon">🏰</span>
+      <div class="flex flex-col text-center">
+        <span class="text-base font-semibold text-gray-300">Get Tickets:</span>
+        <span class="text-xl font-extrabold leading-snug text-gray-200">Young Frankenstein</span>
+        <span class="text-sm font-normal leading-tight mt-1">(Mar 19–28, 2026)</span>
+        <span class="text-sm font-normal leading-tight mt-1 text-red-300">Link Coming Soon</span>
+        <span class="text-sm font-normal leading-tight text-gray-400">Woodland Park Players</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Past Shows Section (Restored Full List, 2019 onwards) -->
+  <!-- Past Shows Section (Sorted Chronologically - Descending, Most Recent First) -->
   <div id="past-shows" class="hidden space-y-4">
     <div class="text-center pt-2 pb-4 mb-4">
       <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Past Shows</h2>
     </div>
 
-    <!-- Past Show 1: Chicago (May 29–Jun 7 2025) -->
+    <!-- Past Show 1: Anything Goes (Nov 7–22 2025) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
+      <div class="flex flex-col text-center">
+        <span class="text-xl font-extrabold leading-snug">Anything Goes</span>
+        <span class="text-sm font-normal leading-tight mt-1">(Nov 7–22 2025)</span>
+        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre Company</span>
+      </div>
+    </div>
+    
+    <!-- Past Show 2: Chicago (May 29–Jun 7 2025) -->
+    <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Chicago</span>
         <span class="text-sm font-normal leading-tight mt-1">(May 29–Jun 7 2025)</span>
@@ -113,9 +126,9 @@
       </div>
     </div>
 
-    <!-- Past Show 2: Spongebob (May 2–18 2025) -->
+    <!-- Past Show 3: Spongebob (May 2–18 2025) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Spongebob</span>
         <span class="text-sm font-normal leading-tight mt-1">(May 2–18 2025)</span>
@@ -123,29 +136,30 @@
       </div>
     </div>
 
-    <!-- Past Show 3: Oliver! (Mar 21–Apr 5 2025) -->
+    <!-- Past Show 4: Oliver! (Mar 21–Apr 5 2025) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Oliver!</span>
         <span class="text-sm font-normal leading-tight mt-1">(Mar 21–Apr 5 2025)</span>
-        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre</span>
+        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre Company</span>
       </div>
     </div>
 
-    <!-- Past Show 4: You're A Good Man, Charlie Brown (Jan 10–19 2025) -->
+    <!-- Past Show 5: You're A Good Man, Charlie Brown (Jan 10–19 2025) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">You're A Good Man, Charlie Brown</span>
         <span class="text-sm font-normal leading-tight mt-1">(Jan 10–19 2025)</span>
         <span class="text-sm font-normal leading-tight text-gray-300">Ovation! Musical Performing Arts</span>
       </div>
     </div>
+    
 
-    <!-- Past Show 5: Anastasia (Dec 6–22 2024) -->
+    <!-- Past Show 6: Anastasia (Dec 6–22 2024) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Anastasia</span>
         <span class="text-sm font-normal leading-tight mt-1">(Dec 6–22 2024)</span>
@@ -153,9 +167,9 @@
       </div>
     </div>
 
-    <!-- Past Show 6: Urinetown (Oct 11–27 2024) -->
+    <!-- Past Show 7: Urinetown (Oct 11–27 2024) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Urinetown</span>
         <span class="text-sm font-normal leading-tight mt-1">(Oct 11–27 2024)</span>
@@ -163,19 +177,19 @@
       </div>
     </div>
 
-    <!-- Past Show 7: Damn Yankees (Sep 6–21 2024) -->
+    <!-- Past Show 8: Damn Yankees (Sep 6–21 2024) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Damn Yankees</span>
         <span class="text-sm font-normal leading-tight mt-1">(Sep 6–21 2024)</span>
-        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre</span>
+        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre Company</span>
       </div>
     </div>
 
-    <!-- Past Show 8: Cabaret (Apr 26–May 12 2024) -->
+    <!-- Past Show 9: Cabaret (Apr 26–May 12 2024) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Cabaret</span>
         <span class="text-sm font-normal leading-tight mt-1">(Apr 26–May 12 2024)</span>
@@ -183,9 +197,9 @@
       </div>
     </div>
 
-    <!-- Past Show 9: Merrily We Roll Along (Mar 29–Apr 21 2024) -->
+    <!-- Past Show 10: Merrily We Roll Along (Mar 29–Apr 21 2024) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Merrily We Roll Along</span>
         <span class="text-sm font-normal leading-tight mt-1">(Mar 29–Apr 21 2024)</span>
@@ -193,19 +207,19 @@
       </div>
     </div>
 
-    <!-- Past Show 10: Anyone Can Whistle (Mar 8–23 2024) -->
+    <!-- Past Show 11: Anyone Can Whistle (Mar 8–23 2024) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Anyone Can Whistle</span>
         <span class="text-sm font-normal leading-tight mt-1">(Mar 8–23 2024)</span>
-        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre</span>
+        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre Company</span>
       </div>
     </div>
 
     <!-- Past Show 11: Beauty and the Beast (Dec 1–17 2023) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Beauty and the Beast</span>
         <span class="text-sm font-normal leading-tight mt-1">(Dec 1–17 2023)</span>
@@ -215,7 +229,7 @@
 
     <!-- Past Show 12: Sunday in the Park with George (May 5–28 2023) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Sunday in the Park with George</span>
         <span class="text-sm font-normal leading-tight mt-1">(May 5–28 2023)</span>
@@ -225,7 +239,7 @@
 
     <!-- Past Show 13: Spamalot (Mar 24–Apr 1 2023) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Spamalot</span>
         <span class="text-sm font-normal leading-tight mt-1">(Mar 24–Apr 1 2023)</span>
@@ -235,7 +249,7 @@
 
     <!-- Past Show 14: 25th Annual Putnam County Spelling Bee (Apr 22–May 8 2022) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">25th Annual Putnam County Spelling Bee</span>
         <span class="text-sm font-normal leading-tight mt-1">(Apr 22–May 8 2022)</span>
@@ -245,7 +259,7 @@
 
     <!-- Past Show 15: Nice Work if You Can Get It (Mar 25–Apr 2 2022) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Nice Work if You Can Get It</span>
         <span class="text-sm font-normal leading-tight mt-1">(Mar 25–Apr 2 2022)</span>
@@ -255,7 +269,7 @@
 
     <!-- Past Show 16: The Rocky Horror Show (Feb 21–Mar 22 2020) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">The Rocky Horror Show</span>
         <span class="text-sm font-normal leading-tight mt-1">(Feb 21–Mar 22 2020)</span>
@@ -265,7 +279,7 @@
 
     <!-- Past Show 17: A Christmas Carol (Dec 6–23 2019) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">A Christmas Carol</span>
         <span class="text-sm font-normal leading-tight mt-1">(Dec 6–23 2019)</span>
@@ -275,7 +289,7 @@
 
     <!-- Past Show 18: Assassins (Sep 27–Oct 20 2019) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Assassins</span>
         <span class="text-sm font-normal leading-tight mt-1">(Sep 27–Oct 20 2019)</span>
@@ -285,17 +299,17 @@
 
     <!-- Past Show 19: Sweeney Todd (May 17–Jun 1 2019) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Sweeney Todd</span>
         <span class="text-sm font-normal leading-tight mt-1">(May 17–Jun 1 2019)</span>
-        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre</span>
+        <span class="text-sm font-normal leading-tight text-gray-300">Reboot Theatre Company</span>
       </div>
     </div>
 
     <!-- Past Show 20: Curtains (Mar 22–30 2019) -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md">
-      <span class="text-2xl mr-4" role="img" aria-label="Musical Note">🎶</span>
+      <span class="text-2xl mr-4 w-6 h-6 inline-block" role="img" aria-label="Space for Icon"></span>
       <div class="flex flex-col text-center">
         <span class="text-xl font-extrabold leading-snug">Curtains</span>
         <span class="text-sm font-normal leading-tight mt-1">(Mar 22–30 2019)</span>

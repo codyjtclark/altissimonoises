@@ -5,52 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Seattle-based freelance woodwind musician Cody Clark's official landing page, featuring upcoming show dates, past performances, and instrument specialization (Clarinet, Saxophone, Flute, Bassoon).">
 <title>Cody Clark | Seattle Woodwind Doubler, Clarinetist & Pit Musician</title>
-<!-- Favicon Link -->
-<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-<!-- Load Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 <style>
   body {
     font-family: 'Inter', sans-serif;
     background-color: #0f172a;
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    padding: 20px
+    padding: 20px;
+    margin: 0;
   }
   .tab-btn {
     padding: .75rem 1rem;
     font-weight: 600;
     border-radius: .5rem;
     transition: all .15s;
-    text-align: center
+    text-align: center;
+  }
+  .inst-card {
+    transition: transform 0.2s ease;
+  }
+  .inst-card:hover {
+    transform: translateY(-2px);
+  }
+  .past-show-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+  }
+  /* Remove secondary scroll bars */
+  #past-shows-container {
+    overflow: visible !important;
+    max-height: none !important;
   }
 </style>
 </head>
 <body class="antialiased">
-<div class="w-full max-w-lg bg-gray-800 p-8 md:p-10 shadow-2xl rounded-xl border border-gray-700">
+<div class="w-full max-w-xl bg-gray-800 p-8 md:p-10 shadow-2xl rounded-xl border border-gray-700 h-fit">
 
   <header class="text-center mb-10 relative">
-    <!-- Theme Toggle Button -->
-    <button id="T" onclick="toggleTheme()" class="absolute top-0 right-0 p-2 text-gray-300 hover:text-teal-500 transition duration-150" aria-label="Toggle Light/Dark Theme">
-      <!-- Sun icon (Light mode) -->
-      <svg id="S" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-      <!-- Moon icon (Dark mode) -->
-      <svg id="M" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-    </button>
-    
     <!-- Profile Info -->
-    <img src="profile-pic.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-teal-500 shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/96x96/44b593/ffffff?text=CC'">
+    <img src="profile-pic.jpg" alt="Profile Picture" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-teal-500 shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/160x160/44b593/ffffff?text=CC'">
+
     <h1 class="text-4xl font-extrabold text-white mb-3">Cody Clark</h1>
-    <p class="text-sm font-semibold text-gray-300 mb-4">Clarinets | Saxes | Flutes | Bassoon</p>
-    
-    <div class="text-gray-100 text-base text-left space-y-3">
-      <p>Cody Clark is a Seattle-based freelance musician specializing in woodwinds. Primarily a clarinetist, Cody also doubles on saxes and flutes and the bassoon in a pinch.</p>
+    <p class="text-sm font-semibold text-gray-300 mb-4 tracking-wide uppercase">Clarinets | Saxes | Flutes | Woodwinds</p>
+
+    <div class="text-gray-100 text-base text-center max-w-prose mx-auto space-y-3">
+      <p>Cody Clark is a Seattle-based freelance musician specializing in woodwinds. Primarily a clarinetist, Cody also doubles on saxes, flutes, double reeds, and world instruments for musical theater.</p>
     </div>
   </header>
 
@@ -66,8 +70,8 @@
       <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Upcoming Shows</h2>
     </div>
 
-    <!-- Upcoming Show 1 -->
-    <a href="https://www.purplepass.com/organizer/64775" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-4 px-6 text-white bg-cyan-700 hover:bg-cyan-800 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-400">
+    <!-- Horizons of Gold -->
+    <a href="https://www.purplepass.com/organizer/64775" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-4 px-6 text-white bg-cyan-700 hover:bg-cyan-800 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-400">
       <span class="text-2xl mr-4" role="img" aria-label="Wheat Icon">🌾</span>
       <div class="flex flex-col text-center">
         <span class="text-base font-semibold">Get Tickets:</span>
@@ -77,13 +81,24 @@
       </div>
     </a>
 
-    <!-- Upcoming Show 2 -->
+    <!-- Ruthless -->
+    <a href="https://www.secondstoryrep.org/product-page/ruthless-the-musical" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-4 px-6 text-white bg-red-800 hover:bg-red-900 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-red-400">
+      <span class="text-2xl mr-4" role="img" aria-label="Star Icon">⭐</span>
+      <div class="flex flex-col text-center">
+        <span class="text-base font-semibold">Get Tickets:</span>
+        <span class="text-xl font-extrabold leading-snug">Ruthless</span>
+        <span class="text-sm font-normal leading-tight mt-1">(Feb 27–Mar 15, 2026)</span>
+        <span class="text-sm font-normal leading-tight text-gray-100">SecondStory Repertory</span>
+      </div>
+    </a>
+
+    <!-- Young Frankenstein -->
     <div class="flex items-center justify-center w-full py-4 px-6 text-gray-300 bg-slate-700 rounded-lg shadow-md">
       <span class="text-2xl mr-4 text-gray-400" role="img" aria-label="Castle Icon">🏰</span>
       <div class="flex flex-col text-center">
         <span class="text-base font-semibold text-gray-300">Get Tickets:</span>
         <span class="text-xl font-extrabold leading-snug">Young Frankenstein</span>
-        <span class="text-sm font-normal leading-tight mt-1 text-red-300">Link Coming Soon</span>
+        <span class="text-sm font-normal leading-tight mt-1 text-red-300">March 20–28, 2026</span>
         <span class="text-sm font-normal leading-tight text-gray-400">Woodland Park Players</span>
       </div>
     </div>
@@ -95,111 +110,183 @@
       <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Past Shows</h2>
     </div>
 
-    <div class="flex flex-col space-y-3">
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">The Hunchback of Notre Dame</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Dec 5–21, 2025)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Bainbridge Performing Arts</span>
+    <div id="past-shows-container" class="grid grid-cols-1 gap-3">
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">The Hunchback of Notre Dame</span>
+          <span class="block text-sm text-teal-400 font-medium">Dec 5–21, 2025</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Anything Goes</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Nov 7–22, 2025)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Reboot Theatre Company</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Anything Goes</span>
+          <span class="block text-sm text-teal-400 font-medium">Nov 7–22, 2025</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre Company</span>
         </div>
-        
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Chicago</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(May 29–Jun 7, 2025)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Bellevue College</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Chicago</span>
+          <span class="block text-sm text-teal-400 font-medium">May 29–Jun 7 2025</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bellevue College</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Spongebob</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(May 2–18, 2025)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Bainbridge Performing Arts</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Spongebob</span>
+          <span class="block text-sm text-teal-400 font-medium">May 2–18 2025</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Oliver!</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Mar 21–Apr 5, 2025)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Reboot Theatre</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Oliver!</span>
+          <span class="block text-sm text-teal-400 font-medium">Mar 21–Apr 5 2025</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">You're A Good Man, Charlie Brown</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Jan 10–19, 2025)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Ovation! Musical Performing Arts</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">You're A Good Man, Charlie Brown</span>
+          <span class="block text-sm text-teal-400 font-medium">Jan 10–19 2025</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Ovation! Musical Performing Arts</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Anastasia</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Dec 6–22, 2024)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Bainbridge Performing Arts</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Anastasia</span>
+          <span class="block text-sm text-teal-400 font-medium">Dec 6–22 2024</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Urinetown</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Oct 11–27, 2024)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Bainbridge Performing Arts</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Urinetown</span>
+          <span class="block text-sm text-teal-400 font-medium">Oct 11–27 2024</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Damn Yankees</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Sep 6–21, 2024)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Reboot Theatre</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Damn Yankees</span>
+          <span class="block text-sm text-teal-400 font-medium">Sep 6–21 2024</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Cabaret</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Apr 26–May 12, 2024)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">Bainbridge Performing Arts</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Cabaret</span>
+          <span class="block text-sm text-teal-400 font-medium">Apr 26–May 12 2024</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
         </div>
-
-        <div class="w-full py-4 px-6 text-white bg-slate-700 rounded-lg shadow-md text-center">
-          <span class="text-xl font-extrabold block leading-snug">Merrily We Roll Along</span>
-          <span class="text-sm font-normal block leading-tight mt-1">(Mar 29–Apr 21, 2024)</span>
-          <span class="text-sm font-normal block leading-tight text-gray-300">SecondStory Repertory</span>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Merrily We Roll Along</span>
+          <span class="block text-sm text-teal-400 font-medium">Mar 29–Apr 21 2024</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Anyone Can Whistle</span>
+          <span class="block text-sm text-teal-400 font-medium">Mar 8–23 2024</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Beauty and the Beast</span>
+          <span class="block text-sm text-teal-400 font-medium">Dec 1–17 2023</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Sunday in the Park with George</span>
+          <span class="block text-sm text-teal-400 font-medium">May 5–28 2023</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Spamalot</span>
+          <span class="block text-sm text-teal-400 font-medium">Mar 24–Apr 1 2023</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Woodland Park Players</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">25th Annual Putnam County Spelling Bee</span>
+          <span class="block text-sm text-teal-400 font-medium">Apr 22–May 8 2022</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Twelfth Night Productions</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Nice Work if You Can Get It</span>
+          <span class="block text-sm text-teal-400 font-medium">Mar 25–Apr 2 2022</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Woodland Park Players</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">The Rocky Horror Show</span>
+          <span class="block text-sm text-teal-400 font-medium">Feb 21–Mar 22 2020</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Burien Actors Theatre</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">A Christmas Carol</span>
+          <span class="block text-sm text-teal-400 font-medium">Dec 6–23 2019</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Assassins</span>
+          <span class="block text-sm text-teal-400 font-medium">Sep 27–Oct 20 2019</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Sweeney Todd</span>
+          <span class="block text-sm text-teal-400 font-medium">May 17–Jun 1 2019</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
+        </div>
+        <div class="past-show-card p-4 rounded-lg text-center">
+          <span class="block text-lg font-bold text-white">Curtains</span>
+          <span class="block text-sm text-teal-400 font-medium">Mar 22–30 2019</span>
+          <span class="block text-xs text-gray-400 uppercase tracking-wide">Woodland Park Players</span>
         </div>
     </div>
   </div>
-  
+
   <!-- Instruments Section -->
   <div class="space-y-4 mt-8 pt-6 border-t border-gray-700">
     <div class="text-center pb-4">
       <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Instruments</h2>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300" id="I">
-      <div class="p-3 rounded-lg bg-gray-700/50 text-center">
-        <h3 class="font-bold text-lg text-teal-300 mb-1">Clarinet</h3>
-        <ul class="text-sm space-y-0.5"><li>Bb</li><li>A</li><li>Eb</li><li>Bass</li></ul>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300">
+      <!-- Clarinet -->
+      <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
+        <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Clarinet</h3>
+        <ul class="text-sm space-y-0.5 font-medium">
+          <li>Bb</li>
+          <li>A</li>
+          <li>Eb</li>
+          <li>Bass</li>
+        </ul>
       </div>
-      <div class="p-3 rounded-lg bg-gray-700/50 text-center">
-        <h3 class="font-bold text-lg text-teal-300 mb-1">Flute</h3>
-        <ul class="text-sm space-y-0.5"><li>Concert</li><li>Piccolo</li><li>Alto</li></ul>
+      <!-- Flute -->
+      <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
+        <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Flute</h3>
+        <ul class="text-sm space-y-0.5 font-medium">
+          <li>Piccolo</li>
+          <li>Concert Flute</li>
+          <li>Alto Flute</li>
+        </ul>
       </div>
-      <div class="p-3 rounded-lg bg-gray-700/50 text-center">
-        <h3 class="font-bold text-lg text-teal-300 mb-1">Sax</h3>
-        <ul class="text-sm space-y-0.5"><li>Soprano</li><li>Alto</li><li>Tenor</li><li>Bari</li></ul>
+      <!-- Sax -->
+      <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
+        <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Saxophone</h3>
+        <ul class="text-sm space-y-0.5 font-medium">
+          <li>Soprano</li>
+          <li>Alto</li>
+          <li>Tenor</li>
+          <li>Baritone</li>
+        </ul>
       </div>
-      <div class="p-3 rounded-lg bg-gray-700/50 text-center">
-        <h3 class="font-bold text-lg text-teal-300 mb-1">Reed</h3>
-        <ul class="text-sm space-y-0.5"><li>Bassoon</li></ul>
+      <!-- Double Reeds -->
+      <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
+        <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Double Reeds</h3>
+        <ul class="text-sm space-y-0.5 font-medium">
+          <li>Oboe</li>
+          <li>Bassoon</li>
+        </ul>
       </div>
-      <div class="p-3 rounded-lg bg-gray-700/50 text-center sm:col-span-2">
-        <h3 class="font-bold text-lg text-teal-300 mb-1">Misc</h3>
-        <ul class="text-sm space-y-0.5"><li>Recorder (S/T)</li><li>Whistle (D, Eb, F)</li><li>Tungso / EWI</li></ul>
+      <!-- World -->
+      <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
+        <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">World</h3>
+        <ul class="text-xs space-y-0.5 font-medium">
+          <li class="font-bold text-teal-400 uppercase text-[10px]">Recorders</li>
+          <li>Soprano | Tenor</li>
+          <li class="font-bold text-teal-400 uppercase text-[10px] mt-1 border-t border-gray-600 pt-1">Penny Whistle</li>
+          <li>D, Eb, F, Low D</li>
+          <li class="font-bold text-teal-400 uppercase text-[10px] mt-1 border-t border-gray-600 pt-1">Traditional</li>
+          <li>Tungso</li>
+        </ul>
       </div>
-    </div>
-  </div>
-
-  <!-- Listen Section -->
-  <div class="space-y-4 mt-8 pt-6 border-t border-gray-700">
-    <div class="text-center pb-4">
-      <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Listen</h2>
-    </div>
-    <div class="w-full max-w-sm mx-auto">
-      <iframe width="100%" height="500" src="https://www.tiktok.com/player/v1/7276937347801926955?music_info=1&description=1" allow="autoplay; fullscreen" frameborder="0" class="rounded-xl shadow-md bg-white"></iframe>
+      <!-- Electronic -->
+      <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
+        <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Electronic</h3>
+        <ul class="text-sm space-y-0.5 font-medium">
+          <li>Akai EWI</li>
+          <li>Pedal Board</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -208,101 +295,35 @@
     <div class="text-center pb-4">
       <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Get in touch</h2>
     </div>
-    <a href="mailto:cody@altissimonoises.com" class="flex items-center justify-center w-full py-4 px-6 text-white bg-teal-500 hover:bg-teal-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02]">
+    <a href="mailto:cody@altissimonoises.com" class="flex items-center justify-center w-full py-4 px-6 text-white bg-teal-500 hover:bg-teal-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
+      <span class="text-2xl mr-4">📧</span>
       <span class="text-xl font-extrabold">Email</span>
     </a>
     <div class="flex flex-col sm:flex-row gap-4">
-      <a href="https://instagram.com/altissimonoises" target="_blank" class="flex flex-1 items-center justify-center py-4 px-6 text-white bg-pink-500 hover:bg-pink-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02]">
-        <span class="text-xl font-extrabold">Instagram</span>
+      <a href="https://www.instagram.com/altissimonoises" target="_blank" class="flex-1 flex items-center justify-center py-4 px-6 text-white bg-pink-500 hover:bg-pink-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
+        <span class="text-2xl mr-4">📸</span>
+        <span class="text-xl font-extrabold text-center">Instagram</span>
       </a>
-      <a href="https://tiktok.com/@clarinetcody" target="_blank" class="flex flex-1 items-center justify-center py-4 px-6 text-white bg-gray-700 hover:bg-gray-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.02]">
-        <span class="text-xl font-extrabold">TikTok</span>
+      <a href="https://www.tiktok.com/@clarinetcody" target="_blank" class="flex-1 flex items-center justify-center py-4 px-6 text-white bg-gray-700 hover:bg-gray-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
+        <span class="text-2xl mr-4">🎶</span>
+        <span class="text-xl font-extrabold text-center">TikTok</span>
       </a>
     </div>
   </div>
+</div>
 
 <script>
-  function toggleTheme() {
-    const b = document.body;
-    const c = document.querySelector('.w-full.max-w-lg');
-    const isLight = b.classList.toggle('light');
-    
-    if (isLight) {
-      b.style.backgroundColor = '#f1f5f9';
-      c.classList.replace('bg-gray-800', 'bg-white');
-      c.classList.replace('border-gray-700', 'border-gray-200');
-      document.getElementById('M').classList.add('hidden');
-      document.getElementById('S').classList.remove('hidden');
-      document.getElementById('T').classList.replace('text-gray-300', 'text-gray-700');
-      c.querySelector('h1').classList.replace('text-white', 'text-gray-900');
-      c.querySelector('p.text-sm').classList.replace('text-gray-300', 'text-gray-600');
-      c.querySelector('.text-gray-100').classList.replace('text-gray-100', 'text-gray-700');
-      c.querySelectorAll('h2').forEach(e => e.classList.replace('text-gray-100', 'text-gray-900'));
-      c.querySelectorAll('.border-gray-700').forEach(e => e.classList.replace('border-gray-700', 'border-gray-300'));
-      document.getElementById('past-shows').querySelectorAll('.w-full').forEach(e => {
-        e.classList.replace('bg-slate-700', 'bg-gray-100');
-        e.classList.replace('text-white', 'text-gray-900');
-        e.querySelectorAll('.text-gray-300').forEach(t => t.classList.replace('text-gray-300', 'text-gray-600'));
-      });
-      c.querySelector('a[href*="mailto"]').classList.replace('bg-teal-500', 'bg-teal-700');
-      c.querySelector('a[href*="tiktok"]').classList.replace('bg-gray-700', 'bg-gray-200');
-      c.querySelector('a[href*="tiktok"]').classList.replace('text-white', 'text-gray-800');
-      document.getElementById('I').querySelectorAll('div').forEach(e => {
-        e.classList.replace('bg-gray-700/50', 'bg-gray-100');
-        e.classList.replace('text-gray-300', 'text-gray-700');
-        e.querySelector('h3').classList.replace('text-teal-300', 'text-teal-700');
-      });
-    } else {
-      b.style.backgroundColor = '#0f172a';
-      c.classList.replace('bg-white', 'bg-gray-800');
-      c.classList.replace('border-gray-200', 'border-gray-700');
-      document.getElementById('S').classList.add('hidden');
-      document.getElementById('M').classList.remove('hidden');
-      document.getElementById('T').classList.replace('text-gray-700', 'text-gray-300');
-      c.querySelector('h1').classList.replace('text-gray-900', 'text-white');
-      c.querySelector('p.text-sm').classList.replace('text-gray-600', 'text-gray-300');
-      c.querySelector('.text-gray-700').classList.replace('text-gray-700', 'text-gray-100');
-      c.querySelectorAll('h2').forEach(e => e.classList.replace('text-gray-900', 'text-gray-100'));
-      c.querySelectorAll('.border-gray-300').forEach(e => e.classList.replace('border-gray-300', 'border-gray-700'));
-      document.getElementById('past-shows').querySelectorAll('.w-full').forEach(e => {
-        e.classList.replace('bg-gray-100', 'bg-slate-700');
-        e.classList.replace('text-gray-900', 'text-white');
-        e.querySelectorAll('.text-gray-600').forEach(t => t.classList.replace('text-gray-600', 'text-gray-300'));
-      });
-      c.querySelector('a[href*="mailto"]').classList.replace('bg-teal-700', 'bg-teal-500');
-      c.querySelector('a[href*="tiktok"]').classList.replace('bg-gray-200', 'bg-gray-700');
-      c.querySelector('a[href*="tiktok"]').classList.replace('text-gray-800', 'text-white');
-      document.getElementById('I').querySelectorAll('div').forEach(e => {
-        e.classList.replace('bg-gray-100', 'bg-gray-700/50');
-        e.classList.replace('text-gray-700', 'text-gray-300');
-        e.querySelector('h3').classList.replace('text-teal-700', 'text-teal-300');
-      });
-    }
-    const currentActive = document.querySelector('.tab-btn.bg-teal-600, .tab-btn.bg-teal-700');
-    if (currentActive) {
-        currentActive.classList.remove('bg-teal-600', 'bg-teal-700');
-        currentActive.classList.add(isLight ? 'bg-teal-700' : 'bg-teal-600');
-    }
-  }
-
-  function showSection(id, element) {
+  function showSection(id, btn) {
     document.getElementById('upcoming-shows').classList.add('hidden');
     document.getElementById('past-shows').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
     
-    const isLight = document.body.classList.contains('light');
-    const activeBg = isLight ? 'bg-teal-700' : 'bg-teal-600';
-    const inactiveBg = isLight ? 'bg-gray-200' : 'bg-gray-700';
-    const inactiveText = isLight ? 'text-gray-700' : 'text-gray-300';
-    
-    [document.getElementById('nav-current'), document.getElementById('nav-past')].forEach(btn => {
-      btn.classList.remove('bg-teal-600', 'bg-teal-700', 'text-white', 'bg-gray-700', 'text-gray-300', 'bg-gray-200', 'text-gray-700');
-      if (btn === element) {
-        btn.classList.add(activeBg, 'text-white');
-      } else {
-        btn.classList.add(inactiveBg, inactiveText);
-      }
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('bg-teal-600', 'text-white');
+      b.classList.add('bg-gray-700', 'text-gray-300');
     });
+    btn.classList.remove('bg-gray-700', 'text-gray-300');
+    btn.classList.add('bg-teal-600', 'text-white');
   }
 </script>
 </body>

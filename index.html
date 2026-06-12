@@ -1,64 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Seattle-based freelance woodwind musician Cody Clark's official landing page, featuring upcoming show dates, past performances, and instrument specialization (Clarinet, Saxophone, Flute, Bassoon).">
-<title>Cody Clark | Seattle Woodwind Doubler, Clarinetist & Pit Musician</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0f172a;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    margin: 0;
-  }
-  .tab-btn {
-    padding: .75rem 1rem;
-    font-weight: 600;
-    border-radius: .5rem;
-    transition: all .15s;
-    text-align: center;
-  }
-  .inst-card {
-    transition: transform 0.2s ease;
-  }
-  .inst-card:hover {
-    transform: translateY(-2px);
-  }
-  .past-show-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
-  }
-  /* Remove secondary scroll bars */
-  #past-shows-container {
-    overflow: visible !important;
-    max-height: none !important;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seattle-based freelance woodwind musician Cody Clark's official landing page, featuring upcoming show dates, past performances, and instrument specialization (Clarinet, Saxophone, Flute, Bassoon).">
+    <title>Cody Clark | Seattle Woodwind Doubler, Clarinetist & Pit Musician</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; display: flex; justify-content: center; min-height: 100vh; padding: 20px; margin: 0; }
+        .tab-btn { padding: .75rem 1rem; font-weight: 600; border-radius: .5rem; transition: all .15s; text-align: center; cursor: pointer; }
+        .inst-card { transition: transform 0.2s ease; }
+        .inst-card:hover { transform: translateY(-2px); }
+        
+        /* Grid setup */
+        .grid-view { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0; width: 100%; }
+        .grid-item { position: relative; overflow: hidden; background: #1e293b; aspect-ratio: 2/3; cursor: pointer; }
+        .grid-poster { width: 100%; height: 100%; object-fit: cover; transition: transform 0.2s ease; }
+        .grid-overlay {
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.85); 
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 12px; text-align: center; opacity: 0; transition: opacity 0.2s ease; pointer-events: none; 
+        }
+        .grid-item:hover .grid-overlay { opacity: 1; }
+        .grid-item:hover .grid-poster { transform: scale(1.05); }
+    </style>
 </head>
 <body class="antialiased">
 <div class="w-full max-w-xl bg-gray-800 p-8 md:p-10 shadow-2xl rounded-xl border border-gray-700 h-fit">
 
   <header class="text-center mb-10 relative">
-    <!-- Profile Info -->
     <img src="profile-pic.jpg" alt="Profile Picture" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-teal-500 shadow-lg" onerror="this.onerror=null; this.src='https://placehold.co/160x160/44b593/ffffff?text=CC'">
-
     <h1 class="text-4xl font-extrabold text-white mb-3">Cody Clark</h1>
     <p class="text-sm font-semibold text-gray-300 mb-4 tracking-wide uppercase">Clarinets | Saxes | Flutes | Double Reeds</p>
-
     <div class="text-gray-100 text-base text-center max-w-prose mx-auto space-y-3">
       <p>Cody Clark is a Seattle-based woodwind specialist. Primarily a clarinetist, Cody also doubles on saxes, flutes, double reeds, and other world instruments for musical theater.</p>
     </div>
   </header>
 
-  <!-- Navigation Tabs -->
   <nav class="flex justify-center space-x-2 mb-8 border-b border-gray-700 pb-4">
     <button id="nav-current" onclick="showSection('upcoming-shows', this)" class="tab-btn bg-teal-600 text-white">Upcoming</button>
     <button id="nav-past" onclick="showSection('past-shows', this)" class="tab-btn bg-gray-700 text-gray-300 hover:bg-gray-600">Past Shows</button>
@@ -66,241 +46,108 @@
 
   <!-- Upcoming Shows Section -->
   <div id="upcoming-shows" class="space-y-4">
-    <div class="text-center pt-2 pb-4 mb-4">
-      <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Upcoming Shows</h2>
-    </div>
-
-    <!-- Frozen -->
-    <a href="https://www.stbridgetchurch.org/news/asb-school-theatre-ensemble-presents-disneys-frozen-the-broadway-musical" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-4 px-6 text-white bg-indigo-700 hover:bg-indigo-800 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-400">
-      <span class="text-2xl mr-4" role="img" aria-label="Snowflake">❄️</span>
+    <div class="text-center pt-2 pb-4 mb-4"><h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Upcoming Shows</h2></div>
+    <a href="https://bainbridgeperformingarts.thundertix.com/events/261779" target="_blank" class="flex items-center justify-center w-full py-4 px-6 text-white bg-[#1e293b] border border-[#334155] hover:border-teal-500/50 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
+      <span class="text-2xl mr-4">🗝️</span>
       <div class="flex flex-col text-center">
-        <span class="text-base font-semibold">Get Tickets:</span>
-        <span class="text-xl font-extrabold leading-snug">Frozen</span>
-        <span class="text-sm font-normal leading-tight mt-1">(Apr 30–May 3, 2026)</span>
-        <span class="text-sm font-normal leading-tight text-gray-100">Assumption St. Bridget School Theatre Ensemble</span>
+        <span class="text-base font-semibold text-teal-400">Get Tickets:</span>
+        <span class="text-xl font-extrabold leading-snug">Fun Home</span>
+        <span class="text-sm font-normal leading-tight mt-1">(October 1–25, 2026)</span>
+      </div>
+    </a>
+    <a href="#" target="_blank" class="flex items-center justify-center w-full py-4 px-6 text-white bg-[#1e293b] border border-[#334155] hover:border-teal-500/50 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
+      <span class="text-2xl mr-4">🌎</span>
+      <div class="flex flex-col text-center">
+        <span class="text-base font-semibold text-teal-400">Tickets Available Soon</span>
+        <span class="text-xl font-extrabold leading-snug">To Be Announced</span>
+        <span class="text-sm font-normal leading-tight mt-1">(March 19–27, 2027)</span>
       </div>
     </a>
   </div>
 
-  <!-- Past Shows Section -->
+  <!-- Past Shows Grid Section -->
   <div id="past-shows" class="hidden space-y-4">
-    <div class="text-center pt-2 pb-4 mb-4">
-      <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Past Shows</h2>
-    </div>
-  
-    <div id="past-shows-container" class="grid grid-cols-1 gap-3">
-
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Young Frankenstein</span>
-          <span class="block text-sm text-teal-400 font-medium">Mar 20–28, 2026</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Woodland Park Players</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Ruthless</span>
-          <span class="block text-sm text-teal-400 font-medium">Feb 27–Mar 15, 2026</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Horizons of Gold</span>
-          <span class="block text-sm text-teal-400 font-medium">Feb 5–15, 2026</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Cedarville University</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">The Hunchback of Notre Dame</span>
-          <span class="block text-sm text-teal-400 font-medium">Dec 5–21, 2025</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Anything Goes</span>
-          <span class="block text-sm text-teal-400 font-medium">Nov 7–22, 2025</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre Company</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Chicago</span>
-          <span class="block text-sm text-teal-400 font-medium">May 29–Jun 7 2025</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bellevue College</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Spongebob</span>
-          <span class="block text-sm text-teal-400 font-medium">May 2–18 2025</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Oliver!</span>
-          <span class="block text-sm text-teal-400 font-medium">Mar 21–Apr 5 2025</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">You're A Good Man, Charlie Brown</span>
-          <span class="block text-sm text-teal-400 font-medium">Jan 10–19 2025</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Ovation! Musical Performing Arts</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Anastasia</span>
-          <span class="block text-sm text-teal-400 font-medium">Dec 6–22 2024</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Urinetown</span>
-          <span class="block text-sm text-teal-400 font-medium">Oct 11–27 2024</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Damn Yankees</span>
-          <span class="block text-sm text-teal-400 font-medium">Sep 6–21 2024</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Cabaret</span>
-          <span class="block text-sm text-teal-400 font-medium">Apr 26–May 12 2024</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Merrily We Roll Along</span>
-          <span class="block text-sm text-teal-400 font-medium">Mar 29–Apr 21 2024</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Anyone Can Whistle</span>
-          <span class="block text-sm text-teal-400 font-medium">Mar 8–23 2024</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Beauty and the Beast</span>
-          <span class="block text-sm text-teal-400 font-medium">Dec 1–17 2023</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Bainbridge Performing Arts</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Sunday in the Park with George</span>
-          <span class="block text-sm text-teal-400 font-medium">May 5–28 2023</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Spamalot</span>
-          <span class="block text-sm text-teal-400 font-medium">Mar 24–Apr 1 2023</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Woodland Park Players</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">25th Annual Putnam County Spelling Bee</span>
-          <span class="block text-sm text-teal-400 font-medium">Apr 22–May 8 2022</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Twelfth Night Productions</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Nice Work if You Can Get It</span>
-          <span class="block text-sm text-teal-400 font-medium">Mar 25–Apr 2 2022</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Woodland Park Players</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">The Rocky Horror Show</span>
-          <span class="block text-sm text-teal-400 font-medium">Feb 21–Mar 22 2020</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Burien Actors Theatre</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">A Christmas Carol</span>
-          <span class="block text-sm text-teal-400 font-medium">Dec 6–23 2019</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Assassins</span>
-          <span class="block text-sm text-teal-400 font-medium">Sep 27–Oct 20 2019</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">SecondStory Repertory</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Sweeney Todd</span>
-          <span class="block text-sm text-teal-400 font-medium">May 17–Jun 1 2019</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Reboot Theatre</span>
-        </div>
-        <div class="past-show-card p-4 rounded-lg text-center">
-          <span class="block text-lg font-bold text-white">Curtains</span>
-          <span class="block text-sm text-teal-400 font-medium">Mar 22–30 2019</span>
-          <span class="block text-xs text-gray-400 uppercase tracking-wide">Woodland Park Players</span>
-        </div>
+    <div class="text-center pt-2 pb-4 mb-4"><h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Past Shows</h2></div>
+    <div class="grid-view overflow-hidden rounded-lg">
+        <div class="grid-item"><img src="img/addams.webp" class="grid-poster" alt="The Addams Family"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">The Addams Family</span><span class="text-xs text-slate-300 leading-tight">Interlake High School</span><span class="text-xs text-teal-300 mt-1 font-medium">6/4/2026 – 6/6/2026</span></div></div>
+        <div class="grid-item"><img src="img/frozen.webp" class="grid-poster" alt="Frozen"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Frozen</span><span class="text-xs text-slate-300 leading-tight">Assumption St. Bridget</span><span class="text-xs text-teal-300 mt-1 font-medium">4/30/2026 – 5/2/2026</span></div></div>
+        <div class="grid-item"><img src="img/frankenstein.webp" class="grid-poster" alt="Young Frankenstein"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Young Frankenstein</span><span class="text-xs text-slate-300 leading-tight">Woodland Park Players</span><span class="text-xs text-teal-300 mt-1 font-medium">3/20/2026 – 6/28/2026</span></div></div>
+        <div class="grid-item"><img src="img/ruthless.webp" class="grid-poster" alt="Ruthless"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Ruthless</span><span class="text-xs text-slate-300 leading-tight">SecondStory Repertory</span><span class="text-xs text-teal-300 mt-1 font-medium">2/27/2026 – 3/15/2026</span></div></div>
+        <div class="grid-item"><img src="img/horizons.webp" class="grid-poster" alt="Horizons of Gold"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Horizons of Gold</span><span class="text-xs text-slate-300 leading-tight">Cedarville University</span><span class="text-xs text-teal-300 mt-1 font-medium">2/5/2026 – 2/15/2026</span></div></div>
+        <div class="grid-item"><img src="img/hunchback.webp" class="grid-poster" alt="The Hunchback of Notre Dame"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">The Hunchback of Notre Dame</span><span class="text-xs text-slate-300 leading-tight">Bainbridge Performing Arts</span><span class="text-xs text-teal-300 mt-1 font-medium">12/5/2025 – 12/21/2025</span></div></div>
+        <div class="grid-item"><img src="img/anything.webp" class="grid-poster" alt="Anything Goes"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Anything Goes</span><span class="text-xs text-slate-300 leading-tight">Reboot Theatre Company</span><span class="text-xs text-teal-300 mt-1 font-medium">11/7/2025 – 11/22/2025</span></div></div>
+        <div class="grid-item"><img src="img/chicago.webp" class="grid-poster" alt="Chicago"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Chicago</span><span class="text-xs text-slate-300 leading-tight">Bellevue College</span><span class="text-xs text-teal-300 mt-1 font-medium">5/29/2025 – 6/7/2025</span></div></div>
+        <div class="grid-item"><img src="img/spongebob.webp" class="grid-poster" alt="Spongebob"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Spongebob</span><span class="text-xs text-slate-300 leading-tight">Bainbridge Performing Arts</span><span class="text-xs text-teal-300 mt-1 font-medium">5/2/2025 – 5/18/2025</span></div></div>
+        <div class="grid-item"><img src="img/oliver.webp" class="grid-poster" alt="Oliver!"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Oliver!</span><span class="text-xs text-slate-300 leading-tight">Reboot Theatre Company</span><span class="text-xs text-teal-300 mt-1 font-medium">3/21/2025 – 4/5/2025</span></div></div>
+        <div class="grid-item"><img src="img/charlie-ovation.webp" class="grid-poster" alt="You're A Good Man, Charlie Brown"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">You're A Good Man, Charlie Brown</span><span class="text-xs text-slate-300 leading-tight">Ovation! Musical Performing Arts</span><span class="text-xs text-teal-300 mt-1 font-medium">1/10/2025 – 1/19/2025</span></div></div>
+        <div class="grid-item"><img src="img/anastasia.webp" class="grid-poster" alt="Anastasia"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Anastasia</span><span class="text-xs text-slate-300 leading-tight">Bainbridge Performing Arts</span><span class="text-xs text-teal-300 mt-1 font-medium">12/6/2024 – 12/22/2024</span></div></div>
+        <div class="grid-item"><img src="img/urinetown.webp" class="grid-poster" alt="Urinetown"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Urinetown</span><span class="text-xs text-slate-300 leading-tight">Bainbridge Performing Arts</span><span class="text-xs text-teal-300 mt-1 font-medium">10/11/2024 – 10/27/2024</span></div></div>
+        <div class="grid-item"><img src="img/damn.webp" class="grid-poster" alt="Damn Yankees"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Damn Yankees</span><span class="text-xs text-slate-300 leading-tight">Reboot Theatre Company</span><span class="text-xs text-teal-300 mt-1 font-medium">9/6/2024 – 9/21/2024</span></div></div>
+        <div class="grid-item"><img src="img/cabaret.webp" class="grid-poster" alt="Cabaret"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Cabaret</span><span class="text-xs text-slate-300 leading-tight">Bainbridge Performing Arts</span><span class="text-xs text-teal-300 mt-1 font-medium">4/26/2024 – 5/12/2024</span></div></div>
+        <div class="grid-item"><img src="img/merrily.webp" class="grid-poster" alt="Merrily We Roll Along (Sub)"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Merrily We Roll Along (Sub)</span><span class="text-xs text-slate-300 leading-tight">SecondStory Repertory</span><span class="text-xs text-teal-300 mt-1 font-medium">3/29/2024 – 4/21/2024</span></div></div>
+        <div class="grid-item"><img src="img/anyone.webp" class="grid-poster" alt="Anyone Can Whistle"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Anyone Can Whistle</span><span class="text-xs text-slate-300 leading-tight">Reboot Theatre Company</span><span class="text-xs text-teal-300 mt-1 font-medium">3/8/2024 – 3/23/2024</span></div></div>
+        <div class="grid-item"><img src="img/beauty.webp" class="grid-poster" alt="Beauty and the Beast"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Beauty and the Beast</span><span class="text-xs text-slate-300 leading-tight">Bainbridge Performing Arts</span><span class="text-xs text-teal-300 mt-1 font-medium">12/1/2023 – 12/17/2023</span></div></div>
+        <div class="grid-item"><img src="img/yagmcb.webp" class="grid-poster" alt="You're A Good Man, Charlie Brown"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">You're A Good Man, Charlie Brown</span><span class="text-xs text-slate-300 leading-tight">Cedarville University</span><span class="text-xs text-teal-300 mt-1 font-medium">10/5/2023 – 10/15/2023</span></div></div>
+        <div class="grid-item"><img src="img/fiddler.webp" class="grid-poster" alt="Fiddler on the Roof"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Fiddler on the Roof</span><span class="text-xs text-slate-300 leading-tight">KAMP Music</span><span class="text-xs text-teal-300 mt-1 font-medium">8/4/2023 – 8/5/2023</span></div></div>
+        <div class="grid-item"><img src="img/sunday.webp" class="grid-poster" alt="Sunday in the Park with George"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Sunday in the Park with George</span><span class="text-xs text-slate-300 leading-tight">SecondStory Repertory</span><span class="text-xs text-teal-300 mt-1 font-medium">5/5/2023 – 5/28/2023</span></div></div>
+        <div class="grid-item"><img src="img/spam.webp" class="grid-poster" alt="Spamalot"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Spamalot</span><span class="text-xs text-slate-300 leading-tight">Woodland Park Players</span><span class="text-xs text-teal-300 mt-1 font-medium">3/24/2023 – 4/1/2023</span></div></div>
+        <div class="grid-item"><img src="img/spell.webp" class="grid-poster" alt="25th Annual Putnam County Spelling Bee"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">25th Annual Putnam County Spelling Bee</span><span class="text-xs text-slate-300 leading-tight">Twelfth Night Productions</span><span class="text-xs text-teal-300 mt-1 font-medium">4/22/2022 – 5/8/2022</span></div></div>
+        <div class="grid-item"><img src="img/nice.webp" class="grid-poster" alt="Nice Work if You Can Get It"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Nice Work if You Can Get It</span><span class="text-xs text-slate-300 leading-tight">Woodland Park Players</span><span class="text-xs text-teal-300 mt-1 font-medium">3/25/2022 – 4/2/2022</span></div></div>
+        <div class="grid-item"><img src="img/rocky.webp" class="grid-poster" alt="The Rocky Horror Show"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">The Rocky Horror Show</span><span class="text-xs text-slate-300 leading-tight">Burien Actors Theatre</span><span class="text-xs text-teal-300 mt-1 font-medium">2/21/2020 – 3/22/2020</span></div></div>
+        <div class="grid-item"><img src="img/christmas.webp" class="grid-poster" alt="A Christmas Carol"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">A Christmas Carol</span><span class="text-xs text-slate-300 leading-tight">SecondStory Repertory</span><span class="text-xs text-teal-300 mt-1 font-medium">12/6/2019 – 12/23/2019</span></div></div>
+        <div class="grid-item"><img src="img/assassins.webp" class="grid-poster" alt="Assassins"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Assassins</span><span class="text-xs text-slate-300 leading-tight">SecondStory Repertory</span><span class="text-xs text-teal-300 mt-1 font-medium">9/27/2019 – 10/20/2019</span></div></div>
+        <div class="grid-item"><img src="img/sweeney.webp" class="grid-poster" alt="Sweeney Todd"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Sweeney Todd</span><span class="text-xs text-slate-300 leading-tight">Reboot Theatre Company (Slate Theatre)</span><span class="text-xs text-teal-300 mt-1 font-medium">5/17/2019 – 6/1/2019</span></div></div>
+        <div class="grid-item"><img src="img/curtains.webp" class="grid-poster" alt="Curtains"><div class="grid-overlay"><span class="font-bold text-white mb-1 leading-tight text-lg">Curtains</span><span class="text-xs text-slate-300 leading-tight">Woodland Park Players</span><span class="text-xs text-teal-300 mt-1 font-medium">3/22/2019 – 3/30/2019</span></div></div>
     </div>
   </div>
 
-  <!-- Instruments Section -->
+  <!-- Instruments -->
   <div class="space-y-4 mt-8 pt-6 border-t border-gray-700">
-    <div class="text-center pb-4">
-      <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Instruments</h2>
-    </div>
+    <div class="text-center pb-4"><h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Instruments</h2></div>
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300">
-      <!-- Clarinet -->
       <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
         <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Clarinet</h3>
-        <ul class="text-sm space-y-0.5 font-medium">
-          <li>Bb</li>
-          <li>A</li>
-          <li>Eb</li>
-          <li>Bass</li>
-        </ul>
+        <ul class="text-sm space-y-0.5 font-medium"><li>Bb | A | Eb | Bass</li></ul>
       </div>
-      <!-- Flute -->
       <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
         <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Flute</h3>
-        <ul class="text-sm space-y-0.5 font-medium">
-          <li>Piccolo</li>
-          <li>Concert Flute</li>
-          <li>Alto Flute</li>
-        </ul>
+        <ul class="text-sm space-y-0.5 font-medium"><li>Piccolo | Concert Flute | Alto Flute</li></ul>
       </div>
-      <!-- Sax -->
       <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
         <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Saxophone</h3>
-        <ul class="text-sm space-y-0.5 font-medium">
-          <li>Soprano</li>
-          <li>Alto</li>
-          <li>Tenor</li>
-          <li>Baritone</li>
-        </ul>
+        <ul class="text-sm space-y-0.5 font-medium"><li>Soprano | Alto | Tenor | Baritone</li></ul>
       </div>
-      <!-- Double Reeds -->
       <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
         <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Double Reeds</h3>
-        <ul class="text-sm space-y-0.5 font-medium">
-          <li>Oboe</li>
-          <li>Bassoon</li>
-        </ul>
+        <ul class="text-sm space-y-0.5 font-medium"><li>Oboe | Bassoon</li></ul>
       </div>
-      <!-- World -->
       <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
         <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">World</h3>
         <ul class="text-xs space-y-0.5 font-medium">
-          <li class="font-bold text-teal-400 uppercase text-[10px]">Recorders</li>
-          <li>Soprano | Tenor</li>
-          <li class="font-bold text-teal-400 uppercase text-[10px] mt-1 border-t border-gray-600 pt-1">Penny Whistles</li>
-          <li>D, Eb, F, Low D</li>
-          <li class="font-bold text-teal-400 uppercase text-[10px] mt-1 border-t border-gray-600 pt-1">Traditional</li>
-          <li>Tungso</li>
+          <li class="font-bold text-teal-400 uppercase text-[10px]">Recorders</li><li>Soprano | Tenor</li>
+          <li class="font-bold text-teal-400 uppercase text-[10px] mt-1 border-t border-gray-600 pt-1">Penny Whistles</li><li>D, Eb, F, Low D</li>
+          <li class="font-bold text-teal-400 uppercase text-[10px] mt-1 border-t border-gray-600 pt-1">Traditional</li><li>Tungso</li>
         </ul>
       </div>
-      <!-- Electronic -->
       <div class="p-3 rounded-lg bg-gray-700/50 text-center inst-card flex flex-col items-center border border-transparent hover:border-teal-500/30">
         <h3 class="font-bold text-lg text-teal-300 mb-2 whitespace-nowrap">Electronic</h3>
-        <ul class="text-sm space-y-0.5 font-medium">
-          <li>Akai EWI</li>
-          <li>Pedal Board</li>
-        </ul>
+        <ul class="text-sm space-y-0.5 font-medium"><li>Akai EWI | Pedal Board</li></ul>
       </div>
     </div>
   </div>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <div class="space-y-4 mt-8 pt-6 border-t border-gray-700">
-    <div class="text-center pb-4">
-      <h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Get in touch</h2>
-    </div>
+    <div class="text-center pb-4"><h2 class="text-2xl font-semibold text-gray-100 tracking-wider">Get in touch</h2></div>
     <a href="mailto:cody@altissimonoises.com" class="flex items-center justify-center w-full py-4 px-6 text-white bg-teal-500 hover:bg-teal-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
-      <span class="text-2xl mr-4">📧</span>
-      <span class="text-xl font-extrabold">Email</span>
+        <span class="text-2xl mr-4">📧</span><span class="text-xl font-extrabold">Email</span>
     </a>
     <div class="flex flex-col sm:flex-row gap-4">
       <a href="https://www.instagram.com/altissimonoises" target="_blank" class="flex-1 flex items-center justify-center py-4 px-6 text-white bg-pink-500 hover:bg-pink-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
-        <span class="text-2xl mr-4">📸</span>
-        <span class="text-xl font-extrabold text-center">Instagram</span>
+        <span class="text-2xl mr-4">📸</span><span class="text-xl font-extrabold text-center">Instagram</span>
       </a>
       <a href="https://www.tiktok.com/@clarinetcody" target="_blank" class="flex-1 flex items-center justify-center py-4 px-6 text-white bg-gray-700 hover:bg-gray-600 rounded-lg shadow-md transition duration-300 transform hover:scale-[1.01]">
-        <span class="text-2xl mr-4">🎶</span>
-        <span class="text-xl font-extrabold text-center">TikTok</span>
+        <span class="text-2xl mr-4">🎶</span><span class="text-xl font-extrabold text-center">TikTok</span>
       </a>
     </div>
   </div>
@@ -311,7 +158,6 @@
     document.getElementById('upcoming-shows').classList.add('hidden');
     document.getElementById('past-shows').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
-    
     document.querySelectorAll('.tab-btn').forEach(b => {
       b.classList.remove('bg-teal-600', 'text-white');
       b.classList.add('bg-gray-700', 'text-gray-300');
